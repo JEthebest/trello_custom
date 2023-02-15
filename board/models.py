@@ -7,7 +7,6 @@ class Task(models.Model):
     class boardNames(models.TextChoices):
         ToDo = 'Сделать'
         InProgress = 'В процессе'
-        Review = 'На проверке'
         Done = 'Выполнено'
     owner = models.ForeignKey('auth.User', on_delete=models.CASCADE,
                               related_name='tasks')

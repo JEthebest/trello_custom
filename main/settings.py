@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-# import environ 
+import environ 
 
 from django.urls.base import reverse_lazy
 
@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'crispy_forms',
     'crispy_tailwind',
+    'order',
+
 ]
 
 MIDDLEWARE = [
@@ -97,6 +99,20 @@ DATABASES = {
 # DATABASES = {
 #     'default': env.db('POSTGRES_URL')
 # }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get('DB_NAME'), 
+#         'USER': os.environ.get('DB_USER'),
+#         'PASSWORD': os.environ.get('DB_PASS'),
+#         'HOST': os.environ.get('DB_HOST'), 
+#         'PORT': os.environ.get('DB_PORT'),
+#     }
+# }
+
+
 
 
 # Password validation

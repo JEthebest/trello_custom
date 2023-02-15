@@ -68,6 +68,9 @@
                         <a @click.prevent="showModal(board)" href="#" class="inline-flex items-center text-sm font-medium" :class="`text-${colorSelected.value}-500 hover:text-${colorSelected.value}-600`">
                         <i class="uil uil-book-medical mr-1"></i>Добавить
                         </a>
+                        <a href="{% url 'order:order_create' %}" class="inline-flex items-center text-sm font-medium" :class="`text-${colorSelected.value}-500 hover:text-${colorSelected.value}-600`"> 
+                        <i class="uil uil-book-medical mr-1"></i>Создать
+                        </a>
                       </div>
 
                       <div class="px-4">
@@ -242,7 +245,6 @@ function board() {
         boards: [
           'Сделать',
           'В процессе',
-          'На проверке',
           'Выполнено'
         ],
         task: {
